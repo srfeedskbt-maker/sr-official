@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SR Feeds — Premium Animal Nutrition | Export-Grade | 30+ Countries</title>
+<meta name="description" content="SR Feeds delivers science-backed, export-grade animal nutrition for broilers, layers, cattle and goats. Trusted by farms and distributors in 30+ countries."/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
+:root{
+  --blk:#05090a;--blk2:#0b1218;--blk3:#111c22;
+  --gold:#c8982a;--gold2:#e8b84a;--gold3:#f5d080;--goldT:rgba(200,152,42,.12);
+  --grn:#0b5e38;--grn2:#083f26;--grnT:rgba(11,94,56,.15);
+  --cream:#f0ece2;--muted:rgba(240,236,226,.52);--muted2:rgba(240,236,226,.28);
+  --bdr:rgba(200,152,42,.15);--bdr2:rgba(200,152,42,.3);
+  --card:rgba(255,255,255,.03);--card2:rgba(255,255,255,.055);
+  --maxw:1200px;--r:16px;
+  --font:'Inter',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--blk);color:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none;cursor:pointer}
+img{display:block;max-width:100%}
+.w{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media(min-width:768px){.w{padding:0 40px}}
+
+/* ─── CANVAS ─── */
+#cvs{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.18}
+
+/* ─── HEADER ─── */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:200;transition:all .4s}
+.hdr.sc{background:rgba(5,9,10,.94);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid var(--bdr)}
+.hi{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--maxw);margin:0 auto;gap:16px}
+@media(min-width:768px){.hi{padding:20px 40px}}
+
+.logo{display:flex;align-items:center;gap:13px;cursor:pointer;flex-shrink:0}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--grn),var(--grn2));border:1px solid rgba(200,152,42,.3);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-mark svg{width:22px;height:22px}
+.logo-name{font-weight:900;font-size:16px;letter-spacing:.5px;line-height:1.1;color:var(--cream)}
+.logo-tag{font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:2px;font-weight:600}
+
+nav{display:none;align-items:center;gap:1px}
+@media(min-width:1060px){nav{display:flex}}
+nav a{padding:8px 13px;border-radius:9px;font-size:13px;font-weight:600;color:var(--muted);transition:all .2s;white-space:nowrap}
+nav a:hover,nav a.act{color:var(--cream);background:rgba(255,255,255,.06)}
+nav a.act{color:var(--gold2)}
+
+.hcta{background:linear-gradient(135deg,var(--gold),var(--gold2))!important;color:#0b1208!important;font-weight:800!important;padding:9px 18px!important;border-radius:9px!important;font-size:13px!important;letter-spacing:.2px;transition:transform .2s,box-shadow .2s!important}
+.hcta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(200,152,42,.3)!important}
+
+.burg{display:flex;align-items:center;background:rgba(255,255,255,.06);border:1px solid var(--bdr);color:var(--cream);padding:9px 13px;border-radius:9px;font-size:18px;cursor:pointer;line-height:1}
+@media(min-width:1060px){.burg{display:none}}
+
+.mnav{display:none;position:fixed;top:74px;left:12px;right:12px;background:rgba(8,14,10,.98);border:1px solid var(--bdr2);border-radius:18px;padding:16px;z-index:199;backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px)}
+.mnav.open{display:block}
+.mnav a{display:block;padding:12px 16px;border-radius:11px;font-size:14px;font-weight:600;color:var(--muted);transition:all .2s;margin-bottom:2px}
+.mnav a:hover,.mnav a.act{color:var(--cream);background:rgba(255,255,255,.07)}
+.mnav a.act{color:var(--gold2)}
+.mnav .mcta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0b1208!important;font-weight:800!important;text-align:center;border-radius:11px;margin-top:10px}
+
+/* ─── MAIN ─── */
+main{position:relative;z-index:2;padding-top:80px}
+.pg{animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ─── FOOTER ─── */
+footer{position:relative;z-index:2;background:var(--blk2);border-top:1px solid var(--bdr)}
+.foot-top{padding:64px 0 48px}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:640px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+@media(min-width:900px){.foot-grid{grid-template-columns:2.5fr 1fr 1fr 1fr}}
+.foot-brand p{font-size:13px;color:var(--muted);line-height:1.75;max-width:280px;margin-top:16px}
+.foot-col h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.foot-col a{display:block;font-size:13px;color:var(--muted);margin-bottom:10px;transition:color .2s}
+.foot-col a:hover{color:var(--cream)}
+.foot-btm{border-top:1px solid rgba(255,255,255,.06);padding:20px 0;display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center}
+@media(min-width:640px){.foot-btm{flex-direction:row;justify-content:space-between}}
+.foot-btm p{font-size:12px;color:var(--muted2)}
+.certbadges{display:flex;gap:8px;flex-wrap:wrap}
+.cbadge{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--gold);border:1px solid var(--bdr);padding:4px 10px;border-radius:6px}
+
+/* ─── WA ─── */
+.wa{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;border-radius:999px;padding:12px 20px;font-weight:800;font-size:13px;z-index:300;box-shadow:0 6px 32px rgba(37,211,102,.28);display:flex;align-items:center;gap:9px;transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.wa:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(37,211,102,.36)}
+@media(max-width:480px){.wa{padding:11px 15px;font-size:12px;right:12px;bottom:12px}}
+
+/* ─── DIVIDER ─── */
+.dv{height:1px;background:linear-gradient(90deg,transparent,var(--bdr),transparent);position:relative;z-index:2}
+
+/* ─── REVEAL ─── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.9,.2,1)}
+.rv.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ─── EYEBROW ─── */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(200,152,42,.1);border:1px solid rgba(200,152,42,.22);color:var(--gold);padding:6px 14px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:24px}
+.edot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pulse 2.2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.5)}}
+
+/* ─── SECTION LABELS ─── */
+.slbl{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.sh{font-size:clamp(26px,3.8vw,48px);font-weight:800;line-height:1.09;letter-spacing:-1.2px;margin-bottom:16px}
+.sh-serif{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.09;letter-spacing:-.5px}
+.ss{font-size:15px;color:var(--muted);line-height:1.8}
+.gold-text{background:linear-gradient(135deg,var(--gold),var(--gold3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ─── HERO ─── */
+.hero{padding:80px 0 70px;position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center}
+@media(min-width:768px){.hero{padding:100px 0 90px}}
+.hero-ambient{position:absolute;inset:0;pointer-events:none}
+.hero-ambient::before{content:'';position:absolute;top:-20%;right:-10%;width:60%;height:80%;background:radial-gradient(ellipse,rgba(11,94,56,.16),transparent 70%);border-radius:50%}
+.hero-ambient::after{content:'';position:absolute;bottom:-10%;left:-5%;width:50%;height:60%;background:radial-gradient(ellipse,rgba(200,152,42,.07),transparent 70%);border-radius:50%}
+
+.hero-grid{display:grid;grid-template-columns:1fr;gap:60px;align-items:center}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.1fr 1fr;gap:80px}}
+
+h1.headline{font-size:clamp(38px,6vw,72px);font-weight:900;line-height:1.02;letter-spacing:-2.5px;margin-bottom:22px}
+h1.headline em{font-style:normal;font-family:var(--serif)}
+
+.lead{font-size:16px;color:var(--muted);line-height:1.8;max-width:510px;margin-bottom:36px}
+@media(min-width:768px){.lead{font-size:17px}}
+
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a1108;padding:14px 28px;border-radius:11px;font-weight:800;font-size:14px;letter-spacing:.2px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 32px rgba(200,152,42,.22);white-space:nowrap}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(200,152,42,.32)}
+.btn-outline{border:1px solid rgba(255,255,255,.16);color:var(--cream);padding:13px 26px;border-radius:11px;font-weight:600;font-size:14px;background:rgba(255,255,255,.04);cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .2s;white-space:nowrap}
+.btn-outline:hover{border-color:var(--gold2);background:rgba(200,152,42,.08);color:var(--gold2)}
+
+.stats-row{display:flex;gap:32px;flex-wrap:wrap;padding-top:32px;border-top:1px solid rgba(255,255,255,.08)}
+.stat-n{font-size:clamp(26px,3.5vw,38px);font-weight:900;color:var(--gold2);letter-spacing:-1.5px;line-height:1}
+.stat-l{font-size:11px;color:var(--muted2);margin-top:4px;letter-spacing:.5px}
+
+/* ─── HERO CARD ─── */
+.hero-card{background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:24px;padding:28px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,94,56,.08),transparent 60%);pointer-events:none}
+.hc-label{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.animal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.animal-item{background:rgba(11,94,56,.1);border:1px solid rgba(11,94,56,.22);border-radius:14px;padding:16px;cursor:pointer;transition:all .25s}
+.animal-item:hover{background:rgba(11,94,56,.22);transform:translateY(-4px);border-color:rgba(11,94,56,.44)}
+.a-icon{font-size:28px;margin-bottom:10px}
+.a-name{font-weight:800;font-size:14px;margin-bottom:2px}
+.a-sub{font-size:11px;color:var(--muted)}
+
+.hc-footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07)}
+.trust-dots{display:flex;gap:6px;align-items:center}
+.trust-dots span{font-size:11px;color:var(--muted)}
+
+.float-badge{position:absolute;top:-14px;right:-8px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a1108;border-radius:16px;padding:11px 16px;font-weight:900;font-size:13px;box-shadow:0 8px 28px rgba(200,152,42,.3);text-align:center;line-height:1.2;z-index:1}
+.float-badge small{display:block;font-size:9px;font-weight:700;opacity:.6;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:3px}
+
+/* ─── SECTIONS ─── */
+.sp{padding:100px 0;position:relative;z-index:2}
+@media(max-width:767px){.sp{padding:64px 0}}
+
+/* ─── TRUST BAR ─── */
+.trust-bar{background:var(--blk2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:22px 0;position:relative;z-index:2}
+.trust-inner{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:center;align-items:center}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--muted);text-transform:uppercase}
+.trust-item span.ti{color:var(--gold);font-size:16px}
+
+/* ─── PRODUCT CARDS ─── */
+.prod-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.prod-grid{grid-template-columns:repeat(4,1fr)}}
+
+.prod-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:28px;cursor:pointer;position:relative;overflow:hidden;transition:all .3s}
+.prod-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--grn),var(--gold));opacity:0;transition:opacity .3s}
+.prod-card:hover{transform:translateY(-8px);border-color:var(--bdr2);background:var(--card2)}
+.prod-card:hover::after{opacity:1}
+.pc-icon{font-size:36px;margin-bottom:20px}
+.pc-name{font-size:18px;font-weight:800;margin-bottom:8px;letter-spacing:-.3px}
+.pc-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px}
+.pc-stat{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:8px 12px;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.07);margin-bottom:6px}
+.pc-stat span:last-child{color:var(--gold2);font-weight:700}
+.pc-link{font-size:13px;color:var(--gold);font-weight:700;display:flex;align-items:center;gap:6px;margin-top:18px;transition:gap .2s}
+.prod-card:hover .pc-link{gap:10px}
+
+/* ─── TESTIMONIALS ─── */
+.test-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.test-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.test-grid{grid-template-columns:repeat(3,1fr)}}
+
+.test-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:all .3s}
+.test-card:hover{border-color:var(--bdr2);transform:translateY(-4px)}
+.test-card::before{content:'\201C';position:absolute;top:-12px;left:18px;font-size:120px;color:rgba(200,152,42,.06);font-family:Georgia,serif;line-height:1;pointer-events:none}
+.t-stars{color:var(--gold2);font-size:14px;letter-spacing:2.5px;margin-bottom:16px}
+.t-text{font-size:14px;color:var(--muted);line-height:1.78;margin-bottom:20px}
+.t-auth{display:flex;align-items:center;gap:12px}
+.t-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--grn),var(--grn2));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:var(--gold);flex-shrink:0;border:1px solid var(--bdr2)}
+.t-name{font-size:14px;font-weight:800}
+.t-role{font-size:11px;color:var(--muted)}
+.t-flag{font-size:16px;margin-left:auto}
+
+/* ─── GLOBAL ─── */
+.globe-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+@media(min-width:900px){.globe-grid{grid-template-columns:1fr 1fr;gap:60px}}
+
+.country-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.country-item{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;transition:all .2s}
+.country-item:hover{border-color:var(--bdr2);background:var(--card2)}
+
+.globe-map{background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:24px;padding:36px;display:flex;align-items:center;justify-content:center;min-height:260px;position:relative;overflow:hidden}
+.globe-map::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(11,94,56,.12),transparent 70%)}
+
+/* ─── QUALITY ─── */
+.qual-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:500px){.qual-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.qual-grid{grid-template-columns:repeat(3,1fr)}}
+
+.qual-card{background:var(--card);border:1px solid var(--bdr);border-radius:18px;padding:24px;transition:all .25s}
+.qual-card:hover{border-color:var(--bdr2);background:var(--card2);transform:translateY(-4px)}
+.q-icon{width:48px;height:48px;background:var(--goldT);border:1px solid rgba(200,152,42,.22);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px}
+.q-title{font-size:16px;font-weight:800;margin-bottom:8px;letter-spacing:-.2px}
+.q-desc{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* ─── METRICS ─── */
+.metrics-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(min-width:640px){.metrics-row{grid-template-columns:repeat(4,1fr)}}
+
+.metric-card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:24px;text-align:center;transition:all .25s}
+.metric-card:hover{border-color:var(--bdr2);transform:translateY(-4px)}
+.m-num{font-size:clamp(30px,4vw,44px);font-weight:900;color:var(--gold2);letter-spacing:-2px;line-height:1}
+.m-lbl{font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.3px}
+
+/* ─── CALC ─── */
+.calc-wrap{background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:24px;padding:36px 28px}
+@media(min-width:768px){.calc-wrap{padding:48px}}
+.calc-fields{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
+@media(min-width:640px){.calc-fields{grid-template-columns:1fr 1fr 1fr}}
+.flbl{display:block;font-size:10px;color:var(--gold);letter-spacing:1.8px;text-transform:uppercase;font-weight:700;margin-bottom:9px}
+.finp,.fsel{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:11px;color:var(--cream);padding:13px 16px;font-size:14px;font-family:inherit;-webkit-appearance:none;transition:all .2s}
+.finp:focus,.fsel:focus{outline:none;border-color:var(--gold);background:rgba(200,152,42,.07)}
+.fsel option{background:#0d1a10;color:var(--cream)}
+.cbtn{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a1108;border:none;border-radius:13px;padding:16px;font-size:15px;font-weight:900;cursor:pointer;letter-spacing:.3px;transition:all .2s;box-shadow:0 8px 28px rgba(200,152,42,.2)}
+.cbtn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(200,152,42,.32)}
+
+.cres{display:none;margin-top:36px;animation:fadeUp .4s ease}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+@media(min-width:640px){.res-grid{grid-template-columns:repeat(4,1fr)}}
+.res-card{background:rgba(200,152,42,.08);border:1px solid rgba(200,152,42,.18);border-radius:14px;padding:18px;text-align:center}
+.res-card.hl{background:linear-gradient(135deg,rgba(200,152,42,.18),rgba(200,152,42,.06));border-color:rgba(200,152,42,.38)}
+.rl{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;font-weight:700}
+.rv2{font-size:22px;font-weight:900;color:var(--cream)}
+.ru{font-size:11px;color:var(--muted);margin-top:4px}
+.insight-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.insight-grid{grid-template-columns:1fr 1fr}}
+.insight-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:20px}
+.insight-box h4{font-size:12px;font-weight:800;color:var(--gold);margin-bottom:12px;letter-spacing:.5px}
+.insight-box p{font-size:13px;color:var(--muted);line-height:1.65}
+.nutri-tags{display:flex;flex-wrap:wrap;gap:7px}
+.nt{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:7px;padding:5px 11px;font-size:12px;color:var(--cream)}
+.nt b{color:var(--gold2);margin-left:3px}
+.tip-box{background:rgba(200,152,42,.07);border-left:3px solid var(--gold);padding:12px 16px;font-size:13px;color:var(--muted);margin-top:10px;border-radius:0 8px 8px 0;font-style:italic;line-height:1.65}
+
+/* ─── CTA BLOCK ─── */
+.cta-block{background:linear-gradient(135deg,rgba(11,94,56,.18),rgba(200,152,42,.07));border:1px solid rgba(200,152,42,.2);border-radius:28px;padding:60px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-block::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:radial-gradient(ellipse,rgba(11,94,56,.2),transparent 70%);border-radius:50%;pointer-events:none}
+@media(min-width:768px){.cta-block{padding:80px 60px}}
+
+/* ─── CONTACT ─── */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 380px}}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.fg label{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:11px;color:var(--cream);padding:13px 16px;font-size:14px;font-family:inherit;transition:all .2s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--gold);background:rgba(200,152,42,.06)}
+.fg select option{background:#0a1a0c}
+.fg textarea{min-height:120px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:500px){.frow{grid-template-columns:1fr 1fr;gap:16px}}
+.contact-info-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:28px}
+.ci-item{display:flex;gap:14px;align-items:flex-start;padding:14px;background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:12px;margin-bottom:12px}
+.ci-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.ci-title{font-size:13px;font-weight:800;margin-bottom:3px}
+.ci-val{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* ─── SPEC TABLE ─── */
+.spec-card{background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:20px;padding:32px}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl{width:100%;border-collapse:collapse;min-width:480px}
+.tbl th{background:rgba(255,255,255,.04);padding:12px 16px;text-align:left;font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.5px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.07)}
+.tbl td{padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;color:var(--muted)}
+.tbl tr:hover td{background:rgba(255,255,255,.02);color:var(--cream)}
+.pb{display:inline-block;background:rgba(200,152,42,.12);border:1px solid rgba(200,152,42,.24);color:var(--gold);border-radius:6px;padding:3px 9px;font-size:10px;font-weight:700;white-space:nowrap}
+
+/* ─── TIMELINE ─── */
+.tl{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:18px;padding-bottom:26px}
+.tl-spine{display:flex;flex-direction:column;align-items:center}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(200,152,42,.15);flex-shrink:0;margin-top:4px}
+.tl-line{width:1px;background:linear-gradient(180deg,rgba(200,152,42,.3),transparent);flex:1;margin-top:6px}
+.tl-yr{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:.5px;margin-bottom:5px}
+.tl-desc{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* ─── TEAM ─── */
+.team-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:600px){.team-grid{grid-template-columns:repeat(3,1fr)}}
+.team-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:28px;text-align:center;transition:all .25s}
+.team-card:hover{border-color:var(--bdr2);transform:translateY(-4px)}
+.team-av{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--grn),var(--grn2));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:var(--gold);margin:0 auto 16px;border:1px solid var(--bdr2)}
+.team-name{font-size:16px;font-weight:800;margin-bottom:4px}
+.team-role{font-size:12px;color:var(--gold);font-weight:700;margin-bottom:10px;letter-spacing:.3px}
+.team-bio{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* ─── VIDEO ─── */
+.vid-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:600px){.vid-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.vid-grid{grid-template-columns:repeat(3,1fr)}}
+.vid-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;cursor:pointer;transition:all .3s}
+.vid-card:hover{transform:translateY(-6px);border-color:var(--bdr2)}
+.vid-thumb{position:relative;padding-bottom:56.25%;background:#000}
+.vid-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,94,56,.45),rgba(5,9,10,.85));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.vid-play{width:56px;height:56px;border-radius:50%;background:rgba(200,152,42,.85);display:flex;align-items:center;justify-content:center;font-size:20px;transition:transform .2s;border:2px solid rgba(200,152,42,.4)}
+.vid-card:hover .vid-play{transform:scale(1.1)}
+.vid-meta{padding:16px 18px}
+.vid-meta h3{font-size:14px;font-weight:800;margin-bottom:5px}
+.vid-meta p{font-size:12px;color:var(--muted);line-height:1.55}
+.vid-tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.vtag{background:var(--goldT);border:1px solid rgba(200,152,42,.2);border-radius:999px;padding:3px 10px;font-size:10px;font-weight:700;color:var(--gold)}
+
+/* ─── FILTER ─── */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.fbtn{padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:none;color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.fbtn.act{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a1108;border-color:transparent}
+
+/* ─── SEARCH ─── */
+.sinp{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:13px;color:var(--cream);padding:14px 20px;font-size:14px;font-family:inherit;margin-bottom:22px}
+.sinp:focus{outline:none;border-color:var(--gold);background:rgba(200,152,42,.06)}
+.sinp::placeholder{color:var(--muted2)}
+
+/* ─── PILL ─── */
+.pill{display:inline-flex;align-items:center;gap:5px;background:var(--goldT);border:1px solid rgba(200,152,42,.22);color:var(--gold);padding:5px 13px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+
+/* ─── MODAL ─── */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:500;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-inner{width:100%;max-width:900px;background:#091209;border-radius:16px;overflow:hidden;border:1px solid var(--bdr);position:relative}
+.modal-cont{position:relative;padding-bottom:56.25%}
+.modal-cont video,.modal-cont iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.7);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:10}
+
+/* ─── ABOUT GRID ─── */
+.about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+@media(min-width:900px){.about-grid{grid-template-columns:1fr 1fr;gap:72px}}
+
+/* ─── PRODUCT PAGE HERO ─── */
+.prod-hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;padding:30px 0 20px}
+@media(min-width:900px){.prod-hero-grid{grid-template-columns:1.1fr 1fr;gap:64px}}
+.kpi-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.kpi-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 20px;text-align:center;min-width:100px}
+.kpi-n{font-weight:900;font-size:22px;color:var(--gold2)}
+.kpi-l{font-size:10px;color:var(--muted);margin-top:3px;letter-spacing:.3px}
+
+/* ─── FLOATING NAV INDICATOR ─── */
+.page-indicator{position:fixed;bottom:80px;right:20px;font-size:11px;font-weight:700;color:var(--muted2);letter-spacing:1px;text-transform:uppercase;z-index:150;writing-mode:vertical-rl;opacity:0;transition:opacity .3s}
+.page-indicator.show{opacity:1}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--blk)}
+::-webkit-scrollbar-thumb{background:rgba(200,152,42,.25);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:rgba(200,152,42,.4)}
+</style>
+</head>
+<body>
+<canvas id="cvs"></canvas>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <div class="hi">
+    <div class="logo" onclick="go('home')">
+      <div class="logo-mark">
+        <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 2L4 7v8l7 5 7-5V7L11 2z" stroke="#c8982a" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M11 6v10M7 9l4 3 4-3" stroke="#c8982a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">SR FEEDS</div>
+        <div class="logo-tag">Premium Animal Nutrition</div>
+      </div>
+    </div>
+    <nav id="nav">
+      <a onclick="go('home')" id="n-home">Home</a>
+      <a onclick="go('products')" id="n-products">Products</a>
+      <a onclick="go('videos')" id="n-videos">Videos</a>
+      <a onclick="go('about')" id="n-about">About</a>
+      <a onclick="go('contact')" class="hcta" id="n-contact">Partner With Us</a>
+    </nav>
+    <button class="burg" id="burg" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <a onclick="go('home');closeMnav()" id="mn-home">Home</a>
+  <a onclick="go('products');closeMnav()" id="mn-products">Products</a>
+  <a onclick="go('broiler');closeMnav()" id="mn-broiler">🐔 Broiler</a>
+  <a onclick="go('layer');closeMnav()" id="mn-layer">🥚 Layer</a>
+  <a onclick="go('cattle');closeMnav()" id="mn-cattle">🐄 Cattle</a>
+  <a onclick="go('goat');closeMnav()" id="mn-goat">🐐 Goat</a>
+  <a onclick="go('calculator');closeMnav()" id="mn-calculator">Calculator</a>
+  <a onclick="go('videos');closeMnav()" id="mn-videos">🎬 Videos</a>
+  <a onclick="go('about');closeMnav()" id="mn-about">About</a>
+  <a onclick="go('contact');closeMnav()" class="mcta" id="mn-contact">Partner With Us</a>
+</div>
+
+<main id="app"></main>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="foot-top">
+    <div class="w">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="logo" onclick="go('home')">
+            <div class="logo-mark">
+              <svg viewBox="0 0 22 22" fill="none"><path d="M11 2L4 7v8l7 5 7-5V7L11 2z" stroke="#c8982a" stroke-width="1.5" stroke-linejoin="round"/><path d="M11 6v10M7 9l4 3 4-3" stroke="#c8982a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="logo-name">SR FEEDS</div>
+              <div class="logo-tag">Premium Animal Nutrition</div>
+            </div>
+          </div>
+          <p>Science-backed, export-grade animal nutrition trusted by farms, distributors and cooperatives across 30+ countries since 2011.</p>
+          <div class="certbadges" style="margin-top:20px">
+            <div class="cbadge">Lab-Tested</div>
+            <div class="cbadge">Export-Ready</div>
+            <div class="cbadge">COA Available</div>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Products</h4>
+          <a onclick="go('broiler')">Broiler Feed</a>
+          <a onclick="go('layer')">Layer Feed</a>
+          <a onclick="go('cattle')">Cattle Feed</a>
+          <a onclick="go('goat')">Goat Feed</a>
+          <a onclick="go('products')">Full Catalogue</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a onclick="go('about')">Our Story</a>
+          <a onclick="go('about')">Team</a>
+          <a onclick="go('about')">Quality & Certs</a>
+          <a onclick="go('calculator')">Feed Calculator</a>
+        </div>
+        <div class="foot-col">
+          <h4>Get In Touch</h4>
+          <a href="tel:+917795976538">+91 77959 76538</a>
+          <a href="mailto:srfeedskbt@gmail.com">srfeedskbt@gmail.com</a>
+          <a onclick="go('contact')">Send Enquiry</a>
+          <a href="https://wa.me/917795976538" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-btm w">
+    <p>© 2025 SR Feeds. Shindikurbet, Gokak Dist., Belagavi, Karnataka, India — 591306</p>
+    <p>Broiler · Layer · Cattle · Goat · 30+ Export Countries</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/917795976538?text=Hello%20SR%20Feeds%2C%20I%20have%20an%20enquiry" target="_blank" rel="noopener">
+  💬 WhatsApp Us
+</a>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-cont" id="mcont"></div>
+  </div>
+</div>
+
+<script>
+/* ─── PARTICLES ─── */
+(function(){
+  const c=document.getElementById('cvs'),ctx=c.getContext('2d');
+  let W,H,P=[];
+  function resize(){W=c.width=innerWidth;H=c.height=innerHeight;
+    P=Array.from({length:55},()=>({x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,
+      r:Math.random()*1.4+.4,a:Math.random()*.6+.2}));}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);
+      ctx.fillStyle=`rgba(200,152,42,${p.a*.18})`;ctx.fill();});
+    P.forEach((p,i)=>P.slice(i+1).forEach(q=>{
+      const d=Math.hypot(p.x-q.x,p.y-q.y);
+      if(d<110){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
+        ctx.strokeStyle=`rgba(200,152,42,${(1-d/110)*.04})`;ctx.lineWidth=.5;ctx.stroke();}}));
+    requestAnimationFrame(draw);}
+  window.addEventListener('resize',resize);resize();draw();
+})();
+
+/* ─── SCROLL ─── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('hdr').classList.toggle('sc',scrollY>60);
+},{passive:true});
+
+/* ─── MOBILE NAV ─── */
+document.getElementById('burg').addEventListener('click',function(){
+  document.getElementById('mnav').classList.toggle('open');
+});
+function closeMnav(){document.getElementById('mnav').classList.remove('open');}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mnav'),b=document.getElementById('burg');
+  if(!m.contains(e.target)&&!b.contains(e.target))m.classList.remove('open');
+});
+
+/* ─── DATA ─── */
+const DB={
+  broiler:{label:'🐔 Broiler',stages:{
+    'Pre-Starter (Day 1–10)':{i:110,f:'Crumble',g:'Gut Dev & Immunity',n:{CP:'21–23%',ME:'2850–2950 kcal/kg'},b:'Strong early immunity leads to lower mortality and better uniformity.',m:'Healthy start = profitable flock.'},
+    'Starter (Day 11–21)':{i:260,f:'Crumble',g:'Muscle & Bone',n:{CP:'20–21%',ME:'2950–3000 kcal/kg'},b:'Balanced calcium and amino acids support strong skeletal development.',m:'Starter builds a strong engine for rapid growth.'},
+    'Grower (Day 22–30)':{i:555,f:'Pellets',g:'Max FCR & Weight',n:{CP:'18–19%',ME:'3000–3100 kcal/kg'},b:'Promotes lean muscle growth and minimises excess fat deposition.',m:'Grower feed gives the best weight at lowest cost.'},
+    'Finisher (Day 31–Market)':{i:985,f:'Pellets',g:'Market Weight',n:{CP:'17–18%',ME:'3100–3200 kcal/kg'},b:'Maximises body weight and carcass quality for premium market pricing.',m:'Finisher = heavy birds, better meat quality, maximum profit at market age.'}
+  }},
+  layer:{label:'🥚 Layer',stages:{
+    'Pre-Starter (0–4W)':{i:28,f:'Crumble',g:'Rapid Growth',n:{CP:'20–21%',Ca:'1.0%'},b:'Builds muscle and organ foundation critical for future egg production.',m:'Healthy chicks month 1 = lifetime productivity.'},
+    'Starter (5–8W)':{i:40,f:'Crumble',g:'Steady Growth',n:{CP:'19–20%',Fiber:'5.0%'},b:'Prevents obesity and keeps birds lean and uniform for future laying.',m:'Uniform birds = predictable cashflow.'},
+    'Grower 1 (9–12W)':{i:58,f:'Crumble',g:'Skeleton Frame',n:{CP:'17–18%',Ca:'1.0%'},b:'Strong bones ensure hens sustain calcium demands during peak production.',m:'Stronger bones = stronger eggs and better shell quality.'},
+    'Grower 2 (13–16W)':{i:70,f:'Crumble',g:'Lean Maintenance',n:{CP:'16–17%',ME:'2650 kcal/kg'},b:'Keeps pullets lean and prevents fat deposition before laying begins.',m:'Fit pullets lay longer.'},
+    'Pre-Layer (17–18W)':{i:88,f:'Crumble',g:'Calcium Reserves',n:{CP:'16–17%',Ca:'2.0%'},b:'Builds bone calcium reserves mobilised for shell formation during lay.',m:'Pre-layer feed is insurance for eggshell quality.'},
+    'Peak (19–32W)':{i:102,f:'Crumble',g:'Max Egg Output',n:{CP:'17–18%',Ca:'3.8%'},b:'Sustains maximum egg output while preserving hen body condition.',m:'Peak production is the profit window.'},
+    'Mid (33–50W)':{i:100,f:'Crumble',g:'Consistent Laying',n:{CP:'16–17%',Ca:'4.0%'},b:'Sustains production after peak and reduces shell breakage losses.',m:'Consistent eggs = consistent cash flow.'},
+    'Late (51W+)':{i:98,f:'Crumble',g:'Extend Life Cycle',n:{CP:'15–16%',Ca:'4.2%'},b:'Strengthens shells of older hens to delay culling.',m:'More eggs per hen, fewer replacements.'}
+  }},
+  cattle:{label:'🐄 Cattle',stages:{
+    'Calf Starter (0–3M)':{i:2.5,u:'kg',f:'Pellets',g:'Rumen Development',n:{CP:'18–20%',Vit:'High'},b:'Early nutrition shapes lifetime productivity, rumen capacity and immunity.',m:'Invest in calves early for stronger adults.'},
+    'Grower (3–12M)':{i:4.5,u:'kg',f:'Mash/Pellets',g:'Body Frame',n:{CP:'16–18%',ME:'Balanced'},b:'Prevents stunted growth and permanent production losses.',m:'The right growth now avoids costly losses later.'},
+    'Heifer (12–24M)':{i:6.0,u:'kg',f:'Mash',g:'Fertility',n:{CP:'14–16%',Fiber:'High'},b:'Balanced minerals ensure safe calving and optimal reproductive performance.',m:'Balanced feed = better fertility.'},
+    'Lactating Cow':{i:8.5,u:'kg',f:'Pellets',g:'Milk & Fat%',n:{CP:'16–18%',Fat:'Bypass'},b:'Directly improves milk yield, fat percentage and cow body condition.',m:'Feed the cow well — she feeds your business.'},
+    'Dry Cow (Pre-Calving)':{i:5.0,u:'kg',f:'Specific Mash',g:'Recovery',n:{Ca:'Balanced',Mg:'High'},b:'Prevents milk fever and prepares the cow for the next productive lactation.',m:'Dry period is an investment in the next lactation.'},
+    'Beef Finishing':{i:9.5,u:'kg',f:'High Energy',g:'Meat Quality',n:{Energy:'High',CP:'15%'},b:'Faster finishing and premium meat quality for better market pricing.',m:'Faster finishing means better profits.'}
+  }},
+  goat:{label:'🐐 Goat',stages:{
+    'Kid Starter (0–3M)':{i:0.25,u:'kg',f:'Pellets',g:'Immunity',n:{CP:'18–20%'},b:'Builds the rumen foundation for faster, healthier growth.',m:'Strong kids today = productive goats tomorrow.'},
+    'Grower (3–9M)':{i:0.65,u:'kg',f:'Mash/Pellets',g:'Body Building',n:{CP:'16–18%'},b:'Ensures steady weight gain, strong body frame and healthy development.',m:'Grow fast, grow strong.'},
+    'Adult / Breeding':{i:1.1,u:'kg',f:'Concentrate',g:'Fertility',n:{CP:'14–16%'},b:'Directly impacts kidding success rate and offspring health.',m:'Good nutrition = better fertility.'},
+    'Pregnant & Lactating':{i:1.4,u:'kg',f:'Pellets',g:'Milk Demand',n:{CP:'16–18%',Ca:'High'},b:'Ensures healthier mothers, higher milk yield and stronger kids.',m:'Feed the mother — feed the kids.'},
+    'Meat Finishing':{i:1.6,u:'kg',f:'Energy Ration',g:'Market Weight',n:{Energy:'Maximum'},b:'Higher selling price through rapid, efficient weight gain.',m:'Every extra kilo means extra income.'}
+  }}
+};
+function fmtKg(x){if(x>=1000)return(x/1000).toFixed(2)+' T';return x.toFixed(1)+' KG';}
+
+/* ─── REVEAL & COUNTERS ─── */
+function initReveal(){
+  const obs=new IntersectionObserver((entries,o)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');o.unobserve(e.target);}});
+  },{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+  setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('vis')),1600);
+}
+function initCounters(){
+  document.querySelectorAll('[data-cnt]').forEach(el=>{
+    const to=+el.getAttribute('data-cnt'),dur=1800;let st=null;
+    const obs=new IntersectionObserver((entries,o)=>{
+      entries.forEach(en=>{if(en.isIntersecting){
+        requestAnimationFrame(function step(ts){
+          if(!st)st=ts;const p=Math.min((ts-st)/dur,1);
+          el.textContent=Math.floor(p*to);if(p<1)requestAnimationFrame(step);else el.textContent=to;
+        });o.unobserve(en.target);}});},{threshold:.4});
+    obs.observe(el);
+  });
+}
+
+/* ─── MODAL ─── */
+function openModal(src,title){
+  const mc=document.getElementById('mcont');mc.innerHTML='';
+  if(src&&src.startsWith('http')){const i=document.createElement('iframe');
+    i.src=src.includes('youtube')?src+'?autoplay=1':src;i.allowFullscreen=true;i.allow='autoplay';mc.appendChild(i);}
+  else{const v=document.createElement('video');v.controls=true;v.playsInline=true;if(src)v.src=src;mc.appendChild(v);setTimeout(()=>v.play().catch(()=>{}),200);}
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){
+  const mc=document.getElementById('mcont');
+  const v=mc.querySelector('video');if(v){v.pause();v.removeAttribute('src');}
+  const i=mc.querySelector('iframe');if(i)i.src='';
+  mc.innerHTML='';document.getElementById('modal').classList.remove('open');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ─── CALC HTML ─── */
+function calcHTML(pfx,lock){
+  const aOpts=lock?`<option value="${lock}">${DB[lock].label}</option>`:
+    Object.entries(DB).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+  return`<div class="calc-wrap rv">
+    <div style="margin-bottom:32px">
+      <div class="slbl">Science-Backed Tool</div>
+      <h2 class="sh" style="font-size:clamp(22px,3vw,34px);margin-bottom:8px">Feed Requirement Calculator</h2>
+      <p class="ss">Enter your farm details for a precision feed report with nutrition intelligence.</p>
+    </div>
+    <div class="calc-fields">
+      <div><label class="flbl">Animal Category</label>
+        <select class="fsel" id="${pfx}-an" onchange="loadStages('${pfx}')" ${lock?'disabled':''}>
+          <option value="">— Select Animal —</option>${aOpts}
+        </select></div>
+      <div><label class="flbl">Production Stage</label>
+        <select class="fsel" id="${pfx}-st"><option value="">— Select Stage —</option></select></div>
+      <div><label class="flbl">Number of Head / Birds</label>
+        <input class="finp" type="number" id="${pfx}-ct" placeholder="e.g. 5000" min="1"/></div>
+    </div>
+    <button class="cbtn" onclick="genReport('${pfx}')">GENERATE FEED REPORT ↗</button>
+    <div class="cres" id="${pfx}-res">
+      <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(200,152,42,.3),transparent);margin:32px 0 28px"></div>
+      <div class="slbl" id="${pfx}-hl">PRECISION FEED REPORT</div>
+      <div class="res-grid">
+        <div class="res-card"><div class="rl">Daily</div><div class="rv2" id="${pfx}-dy">—</div><div class="ru">Per Day</div></div>
+        <div class="res-card"><div class="rl">Weekly</div><div class="rv2" id="${pfx}-wk">—</div><div class="ru">Per Week</div></div>
+        <div class="res-card"><div class="rl">Monthly</div><div class="rv2" id="${pfx}-mo">—</div><div class="ru">Per Month</div></div>
+        <div class="res-card hl"><div class="rl">50 kg Bags</div><div class="rv2" id="${pfx}-bg">—</div><div class="ru">Per Month</div></div>
+      </div>
+      <div class="insight-grid">
+        <div class="insight-box"><h4>🔬 Nutrition Intelligence</h4>
+          <div class="nutri-tags" id="${pfx}-nt"></div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            Form: <span id="${pfx}-fm" style="color:var(--cream);font-weight:700"></span> ·
+            Goal: <span id="${pfx}-gl" style="color:var(--cream);font-weight:700"></span>
+          </div></div>
+        <div class="insight-box" style="border-color:rgba(200,152,42,.2);background:rgba(200,152,42,.04)">
+          <h4>💡 Health & Profit Insight</h4>
+          <p id="${pfx}-tp" style="font-weight:700;color:var(--cream);font-size:14px;margin-bottom:10px"></p>
+          <div class="tip-box" id="${pfx}-bn"></div></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+window.loadStages=function(pfx){
+  const an=document.getElementById(pfx+'-an').value;
+  const sel=document.getElementById(pfx+'-st');
+  sel.innerHTML='<option value="">— Select Stage —</option>';
+  if(!an)return;
+  Object.keys(DB[an].stages).forEach(k=>{const o=document.createElement('option');o.value=k;o.textContent=k;sel.appendChild(o);});
+};
+window.genReport=function(pfx){
+  const an=document.getElementById(pfx+'-an').value;
+  const st=document.getElementById(pfx+'-st').value;
+  const n=parseInt(document.getElementById(pfx+'-ct').value);
+  if(!an||!st||!n||n<1){alert('Please fill all three fields.');return;}
+  const d=DB[an].stages[st];
+  const day=d.u==='kg'?d.i*n:(d.i*n)/1000;
+  document.getElementById(pfx+'-dy').textContent=fmtKg(day);
+  document.getElementById(pfx+'-wk').textContent=fmtKg(day*7);
+  document.getElementById(pfx+'-mo').textContent=fmtKg(day*30);
+  document.getElementById(pfx+'-bg').textContent=Math.ceil((day*30)/50);
+  document.getElementById(pfx+'-hl').textContent='PRECISION REPORT — '+st.toUpperCase();
+  document.getElementById(pfx+'-fm').textContent=d.f;
+  document.getElementById(pfx+'-gl').textContent=d.g;
+  document.getElementById(pfx+'-tp').textContent='💡 '+d.m;
+  document.getElementById(pfx+'-bn').textContent=d.b;
+  const nt=document.getElementById(pfx+'-nt');
+  nt.innerHTML=Object.entries(d.n).map(([k,v])=>`<div class="nt">${k}:<b>${v}</b></div>`).join('');
+  const r=document.getElementById(pfx+'-res');r.style.display='block';
+  r.scrollIntoView({behavior:'smooth',block:'nearest'});
+};
+function initCalcMain(){loadStages('cm');}
+function initAnimalCalc(an){const s=document.getElementById('ac-an');if(s){s.value=an;loadStages('ac');}}
+function initHomeCalc(){const s=document.getElementById('hc-an');if(s)loadStages('hc');}
+
+/* ─── ROUTER ─── */
+const PAGES={
+  home:pgHome,products:pgProducts,
+  broiler:()=>pgAnimal('broiler'),layer:()=>pgAnimal('layer'),
+  cattle:()=>pgAnimal('cattle'),goat:()=>pgAnimal('goat'),
+  calculator:pgCalc,videos:pgVideos,about:pgAbout,contact:pgContact
+};
+
+function go(page){history.pushState({},'','#'+page);render(page);}
+function render(page){
+  const fn=PAGES[page]||PAGES.home;
+  document.getElementById('app').innerHTML='<div class="pg">'+fn()+'</div>';
+  document.getElementById('site-footer').style.display='';
+  window.scrollTo({top:0,behavior:'instant'});
+  initReveal();initCounters();
+  const pages=['home','products','broiler','layer','cattle','goat','calculator','videos','about','contact'];
+  pages.forEach(p=>{
+    const d=document.getElementById('n-'+p);
+    const m=document.getElementById('mn-'+p);
+    if(d)d.classList.toggle('act',p===page);
+    if(m)m.classList.toggle('act',p===page);
+  });
+  if(page==='videos')initVideos();
+  if(page==='calculator')initCalcMain();
+  if(['broiler','layer','cattle','goat'].includes(page))initAnimalCalc(page);
+  if(page==='products')initProducts();
+  if(page==='contact')initContact();
+  if(page==='home')initHomeCalc();
+}
+window.addEventListener('popstate',()=>render(location.hash.replace('#','')||'home'));
+
+/* ══════════════════════════════════
+   PAGE: HOME
+══════════════════════════════════ */
+function pgHome(){return`
+<section class="hero">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow rv"><span class="edot"></span>14 Years of R&D · 30+ Countries · Export-Grade</div>
+        <h1 class="headline rv d1">Nutrition that drives<br><em class="gold-text">livestock</em> to<br>peak performance</h1>
+        <p class="lead rv d2">Research-driven, science-backed animal nutrition for Broilers, Layers, Cattle and Goats — trusted by commercial farms and distributors worldwide.</p>
+        <div class="btn-row rv d2">
+          <a class="btn-gold" onclick="go('contact')">Partner With Us ↗</a>
+          <a class="btn-outline" onclick="go('products')">Explore Products</a>
+        </div>
+        <div class="stats-row rv d3">
+          <div><div class="stat-n" data-cnt="14">0</div><div class="stat-l">Years R&D</div></div>
+          <div><div class="stat-n" data-cnt="1500">0</div><div class="stat-l">Tons / Month</div></div>
+          <div><div class="stat-n" data-cnt="30">0</div><div class="stat-l">Export Countries</div></div>
+          <div><div class="stat-n" data-cnt="4">0</div><div class="stat-l">Animal Programs</div></div>
+        </div>
+      </div>
+      <div class="rv d2" style="position:relative">
+        <div class="float-badge"><small>Avg FCR</small>Reduced<br><span style="font-size:24px;font-weight:900">−8%</span></div>
+        <div class="hero-card">
+          <div class="hc-label">Our 4 Nutrition Programs</div>
+          <div class="animal-grid">
+            <div class="animal-item" onclick="go('broiler')"><div class="a-icon">🐔</div><div class="a-name">Broiler</div><div class="a-sub">4-Stage · Day 1 to Market</div></div>
+            <div class="animal-item" onclick="go('layer')"><div class="a-icon">🥚</div><div class="a-name">Layer</div><div class="a-sub">8-Phase Program</div></div>
+            <div class="animal-item" onclick="go('cattle')"><div class="a-icon">🐄</div><div class="a-name">Cattle</div><div class="a-sub">Calf → Lactation</div></div>
+            <div class="animal-item" onclick="go('goat')"><div class="a-icon">🐐</div><div class="a-name">Goat</div><div class="a-sub">Kid → Breeder</div></div>
+          </div>
+          <div class="hc-footer">
+            <div style="font-size:11px;color:var(--muted)">Certified · Lab-tested · Export-grade</div>
+            <div class="trust-dots"><span class="edot"></span><span style="font-size:11px;color:var(--gold2);font-weight:700">LIVE ORDERS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="w">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="ti">✦</span> In-House QA Lab</div>
+      <div class="trust-item"><span class="ti">✦</span> COA Per Batch</div>
+      <div class="trust-item"><span class="ti">✦</span> Export Compliant</div>
+      <div class="trust-item"><span class="ti">✦</span> 30+ Countries</div>
+      <div class="trust-item"><span class="ti">✦</span> 1,500 Tons/Month</div>
+      <div class="trust-item"><span class="ti">✦</span> Farmer-First R&D</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="sp">
+  <div class="w">
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:52px">
+      <div class="slbl rv">Science-Backed Nutrition</div>
+      <h2 class="sh rv d1" style="max-width:560px">Stage-specific programs for every animal, every phase</h2>
+      <p class="ss rv d2" style="max-width:480px">Four complete nutrition programs engineered for growth, production and profitability — trusted by commercial farms worldwide.</p>
+    </div>
+    <div class="prod-grid">
+      ${[['broiler','🐔','Broiler Feed','4-stage program from Day 1 to market — optimised for FCR, uniformity and carcass quality.','Pre-Starter CP','21–23%','Max ME','3100–3200 kcal/kg','FCR Improvement','Up to 8%'],
+        ['layer','🥚','Layer Feed','8-phase program from pullet to late lay — engineered for peak egg count and shell quality.','Peak Phase CP','17–18%','Peak Calcium','3.5–3.8%','Eggs Per Bird','+6%'],
+        ['cattle','🐄','Cattle Feed','6-stage program from calf through lactation and beef finishing.','Lactation CP','16–18%','Milk Yield Improvement','+12%','Calf Starter CP','18–20%'],
+        ['goat','🐐','Goat Feed','5-stage nutrition from kid starter to breeding and meat finishing programs.','Kid Starter CP','18–20%','Weight Gain','+8%','Avg CP','14–18%']]
+        .map(([pg,ic,nm,desc,k1,v1,k2,v2,k3,v3],i)=>`
+      <div class="prod-card rv d${i}" onclick="go('${pg}')">
+        <div class="pc-icon">${ic}</div>
+        <div class="pc-name">${nm}</div>
+        <div class="pc-desc">${desc}</div>
+        <div class="pc-stat"><span>${k1}</span><span>${v1}</span></div>
+        <div class="pc-stat"><span>${k2}</span><span>${v2}</span></div>
+        <div class="pc-stat"><span>${k3}</span><span>${v3}</span></div>
+        <div class="pc-link">Explore Program →</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<!-- CALCULATOR -->
+<section class="sp" style="background:linear-gradient(180deg,rgba(11,94,56,.05),transparent)">
+  <div class="w">
+    <div style="text-align:center;max-width:620px;margin:0 auto 52px">
+      <div class="eyebrow rv" style="justify-content:center"><span class="edot"></span>Free Intelligence Tool</div>
+      <h2 class="sh rv d1">Precision Feed Calculator</h2>
+      <p class="ss rv d2" style="margin:0 auto">Instantly calculate daily, weekly and monthly feed requirements with stage-specific nutrition intelligence and bag planning.</p>
+    </div>
+    ${calcHTML('hc',null)}
+    <div style="text-align:center;margin-top:28px">
+      <a class="btn-gold" onclick="go('calculator')" style="display:inline-flex">Open Full Calculator ↗</a>
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+
+<div class="dv"></div>
+
+<!-- QUALITY -->
+<section class="sp" style="background:linear-gradient(180deg,rgba(11,94,56,.05),transparent)">
+  <div class="w">
+    <div style="text-align:center;max-width:560px;margin:0 auto 52px">
+      <div class="slbl rv">Why SR Feeds</div>
+      <h2 class="sh rv d1">Premium quality you can verify</h2>
+      <p class="ss rv d2" style="margin:0 auto">Every batch rigorously tested. Every claim fully backed by documentation.</p>
+    </div>
+    <div class="qual-grid">
+      ${[['🔬','In-House QA Lab','Every batch undergoes proximate analysis, pathogen checks and micronutrient validation. Certificate of Analysis available per batch.'],
+        ['📦','Export Packaging','25 kg, 40 kg and 50 kg formats with international labelling. Custom palletization and branding available for distributors.'],
+        ['🌾','Raw Material Traceability','Full traceability from raw material sourcing to batch records. Sustainable and responsible sourcing commitments in place.'],
+        ['📋','Compliance Documentation','Health certificates, phytosanitary paperwork and full export compliance documents available on request.'],
+        ['🧪','Continuous R&D','In-house nutritionists continuously refine formulations based on on-farm performance data from 14+ years.'],
+        ['🤝','Technical Farmer Support','Dedicated technical support and feeding program guidance for distributor partners and commercial farms.']]
+        .map(([ic,t,d],i)=>`
+      <div class="qual-card rv d${i%3}">
+        <div class="q-icon">${ic}</div>
+        <div class="q-title">${t}</div>
+        <div class="q-desc">${d}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<!-- TESTIMONIALS -->
+<section class="sp">
+  <div class="w">
+    <div style="text-align:center;max-width:580px;margin:0 auto 52px">
+      <div class="slbl rv">Global Customer Proof</div>
+      <h2 class="sh rv d1">Trusted by farms and distributors worldwide</h2>
+    </div>
+    <div class="test-grid">
+      ${[['RK','Ramesh Kumar','Poultry Farmer · Belagavi, Karnataka',
+          'Switched to SR Feeds broiler program two years ago. FCR dropped 8%, flock uniformity improved dramatically. Their technical support is genuinely world-class.','🇮🇳'],
+        ['AM','Amina Mwangi','Dairy Cooperative · Nairobi, Kenya',
+          'The lactation ration increased our herd milk yield within 3 weeks. Quality is consistent batch-to-batch. COA and export documentation made the whole onboarding process seamless.','🇰🇪'],
+        ['KA','Khalid Al-Rashidi','Regional Distributor · Dubai, UAE',
+          'As a UAE distributor, we needed reliable quality with complete export documentation. SR Feeds delivers both every time. Fast sampling, accurate COA, responsive team.','🇦🇪']]
+        .map(([av,nm,rl,txt,fl],i)=>`
+      <div class="test-card rv d${i}">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-text">"${txt}"</div>
+        <div class="t-auth">
+          <div class="t-av">${av}</div>
+          <div><div class="t-name">${nm}</div><div class="t-role">${rl}</div></div>
+          <div class="t-flag">${fl}</div>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<!-- CTA -->
+<section class="sp">
+  <div class="w">
+    <div class="cta-block rv">
+      <div class="eyebrow" style="display:inline-flex;margin-bottom:22px"><span class="edot"></span>Ready to Partner?</div>
+      <h2 class="sh" style="margin-bottom:16px;max-width:560px;margin-left:auto;margin-right:auto">Let's grow your livestock business together</h2>
+      <p class="ss" style="margin:0 auto 36px;max-width:500px">Request samples, export pricing, technical specs or distributor agreements. Our team responds within 48 hours.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn-gold" onclick="go('contact')">Send Partnership Enquiry ↗</a>
+        <a class="btn-outline" href="https://wa.me/917795976538" target="_blank">WhatsApp Us Now</a>
+        <a class="btn-outline" onclick="go('calculator')">Run Feed Calculator</a>
+      </div>
+    </div>
+  </div>
+</section>
+`;}
+
+/* ══════════════════════════════════
+   PAGE: PRODUCTS
+══════════════════════════════════ */
+function pgProducts(){return`
+<section class="hero" style="min-height:auto;padding:80px 0 60px">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div class="eyebrow rv"><span class="edot"></span>Complete Catalogue</div>
+    <h1 class="headline rv d1" style="font-size:clamp(34px,5vw,60px)">Product Range &<br>Technical Specifications</h1>
+    <p class="lead rv d2" style="max-width:580px">Stage-specific formulations for Broiler, Layer, Cattle and Goat — export-ready with full technical documentation on request.</p>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <input class="sinp rv" id="psearch" placeholder="🔍  Search products, stages, nutrients…" oninput="filterProds()"/>
+    <div class="filter-row">
+      <button class="fbtn act" data-pf="all" onclick="setPF(this,'all')">All Programs</button>
+      <button class="fbtn" data-pf="broiler" onclick="setPF(this,'broiler')">🐔 Broiler</button>
+      <button class="fbtn" data-pf="layer" onclick="setPF(this,'layer')">🥚 Layer</button>
+      <button class="fbtn" data-pf="cattle" onclick="setPF(this,'cattle')">🐄 Cattle</button>
+      <button class="fbtn" data-pf="goat" onclick="setPF(this,'goat')">🐐 Goat</button>
+    </div>
+    <div id="prod-list">
+      ${Object.entries(DB).map(([an,av])=>`
+      <div class="spec-card rv" data-an="${an}" style="margin-bottom:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px">
+          <div>
+            <div style="font-size:36px;margin-bottom:12px">${an==='broiler'?'🐔':an==='layer'?'🥚':an==='cattle'?'🐄':'🐐'}</div>
+            <h2 class="sh" style="font-size:clamp(20px,2.8vw,30px);margin-bottom:10px">${av.label.split(' ').slice(1).join(' ')} Feed Program</h2>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+              <span style="font-size:13px;color:var(--muted)">${Object.keys(av.stages).length} production stages</span>
+              <span class="pill">${an==='broiler'?'FCR Optimised':an==='layer'?'8-Phase Program':an==='cattle'?'Dairy & Beef':'Meat & Dairy'}</span>
+            </div>
+          </div>
+          <a class="btn-gold" onclick="go('${an}')">View Full Program →</a>
+        </div>
+        <div class="tscroll"><table class="tbl">
+          <thead><tr><th>Stage</th><th>Crude Protein</th><th>ME / Energy</th><th>Special Nutrients</th><th>Form</th><th>Goal</th></tr></thead>
+          <tbody>
+          ${Object.entries(av.stages).map(([st,d])=>`
+            <tr data-kw="${st.toLowerCase()} ${Object.values(d.n).join(' ').toLowerCase()} ${d.f.toLowerCase()} ${d.g.toLowerCase()}">
+              <td><div class="pb">${st}</div></td>
+              <td>${d.n.CP||'—'}</td>
+              <td>${d.n.ME||d.n.Energy||'—'}</td>
+              <td>${Object.entries(d.n).filter(([k])=>!['CP','ME','Energy'].includes(k)).map(([k,v])=>k+': '+v).join(', ')||'—'}</td>
+              <td>${d.f}</td>
+              <td style="color:var(--cream)">${d.g}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table></div>
+      </div>`).join('')}
+    </div>
+    <div class="spec-card rv" style="border-color:rgba(11,94,56,.35);background:rgba(11,94,56,.07)">
+      <h3 style="font-size:20px;font-weight:800;margin-bottom:20px">📦 Export & Packaging Standards</h3>
+      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr;gap:12px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:12px;padding:16px">
+              <div style="font-weight:800;margin-bottom:6px;color:var(--gold)">Pack Sizes</div>
+              <div style="font-size:13px;color:var(--muted)">25 kg · 40 kg · 50 kg · Custom palletization for bulk export orders</div>
+            </div>
+            <div style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:12px;padding:16px">
+              <div style="font-weight:800;margin-bottom:6px;color:var(--gold)">Documents</div>
+              <div style="font-size:13px;color:var(--muted)">COA · Health Certificate · Phytosanitary · Batch Records · Traceability</div>
+            </div>
+            <div style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:12px;padding:16px">
+              <div style="font-weight:800;margin-bottom:6px;color:var(--gold)">Shelf Life</div>
+              <div style="font-size:13px;color:var(--muted)">6–12 months depending on packaging. Store cool and dry.</div>
+            </div>
+            <div style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:12px;padding:16px">
+              <div style="font-weight:800;margin-bottom:6px;color:var(--gold)">MOQ</div>
+              <div style="font-size:13px;color:var(--muted)">Contact our export team for minimum order quantities by destination.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;}
+
+function initProducts(){
+  window.setPF=function(btn,f){
+    document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('act'));
+    btn.classList.add('act');
+    document.querySelectorAll('#prod-list [data-an]').forEach(el=>{
+      el.style.display=(f==='all'||el.getAttribute('data-an')===f)?'block':'none';});
+  };
+  window.filterProds=function(){
+    const q=(document.getElementById('psearch').value||'').toLowerCase();
+    document.querySelectorAll('#prod-list [data-an]').forEach(card=>{
+      const f=document.querySelector('.fbtn.act').getAttribute('data-pf');
+      const anMatch=f==='all'||card.getAttribute('data-an')===f;
+      const rows=card.querySelectorAll('tbody tr');let anyMatch=false;
+      rows.forEach(r=>{const kw=(r.getAttribute('data-kw')||'')+(r.textContent||'').toLowerCase();
+        const m=!q||kw.includes(q);r.style.display=m?'':'none';if(m)anyMatch=true;});
+      card.style.display=(anMatch&&(!q||anyMatch))?'block':'none';
+    });
+  };
+}
+
+/* ══════════════════════════════════
+   PAGE: ANIMAL
+══════════════════════════════════ */
+function pgAnimal(an){
+  const d=DB[an];
+  const meta={
+    broiler:{icon:'🐔',h1:'Broiler Nutrition<br><em class="gold-text">Pre-Starter to Finisher</em>',lead:'Stage-wise broiler rations engineered to improve early uniformity, feed conversion and market carcass quality. Trusted by commercial poultry farms worldwide.',k1:'8%',k1l:'FCR Improvement',k2:'21–23%',k2l:'Pre-Starter CP',k3:'3100–3200',k3l:'Max ME kcal/kg',specs:[['Pre-Starter (Day 1–10)','21–23%','2850–2950','1.0% Ca','Crumble'],['Starter (Day 11–21)','20–21%','2950–3000','0.9% Ca','Crumble'],['Grower (Day 22–30)','18–19%','3000–3100','0.8% Ca','Pellets'],['Finisher (Day 31–Market)','17–18%','3100–3200','0.8% Ca','Pellets']]},
+    layer:{icon:'🥚',h1:'Layer Nutrition<br><em class="gold-text">8-Phase Egg Program</em>',lead:'Phase-wise nutrition that supports onset of lay, peak egg production and consistent shell quality through all 8 production phases.',k1:'+6%',k1l:'Eggs / Bird',k2:'17–18%',k2l:'Peak Phase CP',k3:'3.8%',k3l:'Peak Calcium',specs:[['Pre-Layer (17–18W)','16–17%','2700–2800','1.8–2.0% Ca','Crumble'],['Peak Phase (19–32W)','17–18%','2700–2800','3.5–3.8% Ca','Crumble'],['Mid Phase (33–50W)','16–17%','2650–2750','4.0% Ca','Crumble'],['Late Phase (51W+)','15–16%','2650–2750','4.0–4.2% Ca','Crumble']]},
+    cattle:{icon:'🐄',h1:'Cattle Nutrition<br><em class="gold-text">Calf to Lactation</em>',lead:'Balanced formulations that support rumen development, strong immunity, better reproduction and increased milk yield across all life stages.',k1:'+12%',k1l:'Milk Yield',k2:'16–20%',k2l:'Avg CP Range',k3:'Balanced',k3l:'Mineral Profile',specs:[['Calf Starter (0–3M)','18–20%','—','High Vit.','Pellets'],['Grower (3–12M)','16–18%','Balanced','—','Mash/Pellets'],['Lactation Mix','16–18%','Energy Dense','Bypass Fat','Pellets'],['Dry Cow','14–16%','—','High Mg','Specific Mash']]},
+    goat:{icon:'🐐',h1:'Goat Nutrition<br><em class="gold-text">Kid to Breeder</em>',lead:'Palatable, nutrient-dense rations for kid growth, breeder fertility and meat or milk quality — engineered for smallholder and commercial systems.',k1:'+8%',k1l:'Weight Gain',k2:'16–18%',k2l:'Avg CP',k3:'Improved',k3l:'Conception Rate',specs:[['Kid Starter (0–4M)','16–18%','—','—','Pellets'],['Grower (3–9M)','16–18%','—','—','Mash/Pellets'],['Breeder Ration','14–16%','—','Minerals','Concentrate'],['Finishing Mix','14–16%','High Energy','—','Energy Ration']]}
+  };
+  const m=meta[an];
+  return`
+<section class="hero" style="min-height:auto;padding:80px 0 60px">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div class="prod-hero-grid">
+      <div>
+        <div class="eyebrow rv"><span class="edot"></span>${d.label} Program</div>
+        <h1 class="headline rv d1" style="font-size:clamp(32px,5vw,58px)">${m.h1}</h1>
+        <p class="lead rv d2" style="max-width:500px">${m.lead}</p>
+        <div class="btn-row rv d2">
+          <a class="btn-gold" onclick="go('contact')">Request Sample ↗</a>
+          <a class="btn-outline" onclick="go('calculator')">Feed Calculator</a>
+        </div>
+        <div class="kpi-row rv d3">
+          <div class="kpi-box"><div class="kpi-n">${m.k1}</div><div class="kpi-l">${m.k1l}</div></div>
+          <div class="kpi-box"><div class="kpi-n">${m.k2}</div><div class="kpi-l">${m.k2l}</div></div>
+          <div class="kpi-box"><div class="kpi-n">${m.k3}</div><div class="kpi-l">${m.k3l}</div></div>
+        </div>
+      </div>
+      <div class="rv d2">
+        <div style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:24px;padding:32px;text-align:center">
+          <div style="font-size:88px;margin-bottom:18px">${m.icon}</div>
+          <div style="font-size:16px;font-weight:800;margin-bottom:8px;letter-spacing:-.3px">${d.label} Program</div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:24px">${Object.keys(d.stages).length} production stages · Export-ready · COA per batch</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+            <span class="pill">Lab-Tested</span><span class="pill">COA Available</span><span class="pill">Export Grade</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <div class="slbl rv">Technical Specifications</div>
+    <h2 class="sh rv d1">Stage-wise Nutrition Data</h2>
+    <div class="spec-card rv d2" style="margin-top:28px">
+      <div class="tscroll"><table class="tbl">
+        <thead><tr><th>Feed Stage</th><th>Crude Protein %</th><th>ME / Energy</th><th>Special Nutrients</th><th>Feed Form</th></tr></thead>
+        <tbody>${m.specs.map(([s,cp,me,sp,f])=>`<tr><td><span class="pb">${s}</span></td><td>${cp}</td><td>${me}</td><td>${sp}</td><td>${f}</td></tr>`).join('')}</tbody>
+      </table></div>
+    </div>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted2)">*Performance varies by management conditions. Contact our technical team for tailored feeding programs.</p>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">${calcHTML('ac',an)}</div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <div class="cta-block rv">
+      <h2 class="sh" style="margin-bottom:14px">Start with ${d.label}?</h2>
+      <p class="ss" style="margin:0 auto 32px;text-align:center;max-width:480px">Request samples, full technical specs or export documentation from our team.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn-gold" onclick="go('contact')">Contact Sales Team ↗</a>
+        <a class="btn-outline" href="https://wa.me/917795976538?text=Hello%20SR%20Feeds%2C%20I%20need%20${an}%20feed%20details" target="_blank">WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+`;}
+
+/* ══════════════════════════════════
+   PAGE: CALCULATOR
+══════════════════════════════════ */
+function pgCalc(){return`
+<section class="hero" style="min-height:auto;padding:80px 0 60px">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div style="text-align:center;max-width:680px;margin:0 auto">
+      <div class="eyebrow rv" style="justify-content:center"><span class="edot"></span>Free Scientific Tool</div>
+      <h1 class="headline rv d1" style="font-size:clamp(34px,5.5vw,62px)">Precision Feed<br>Intelligence Calculator</h1>
+      <p class="lead rv d2" style="margin:0 auto 30px">Calculate daily, weekly and monthly feed requirements for any animal and production stage. Includes bag planning and profit intelligence.</p>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap" class="rv d3">
+        <span class="pill">4 Animal Types</span><span class="pill">Stage-Specific</span><span class="pill">Bag Planning</span><span class="pill">Profit Insights</span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    ${calcHTML('cm',null)}
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:44px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        ${[['🌾','All 4 Animal Types','Broiler, Layer, Cattle, and Goat programs in one tool.'],
+          ['📊','Stage-Specific Science','Nutrition data matched to each production phase.'],
+          ['📦','50 kg Bag Planning','Instant procurement planning for your farm or business.'],
+          ['💡','Profit Intelligence','Health and profit tips for each growth stage.'],
+          ['🌍','Export Planning','Monthly volume data ideal for distributors and importers.'],
+          ['🔬','Lab-Validated Data','All nutrition data derived from our in-house research team.']]
+          .map(([ic,t,d])=>`<div class="qual-card rv"><div class="q-icon">${ic}</div><div class="q-title" style="font-size:14px">${t}</div><div class="q-desc" style="font-size:12px">${d}</div></div>`).join('')}
+      </div>
+    </div>
+  </div>
+</section>
+`;}
+
+/* ══════════════════════════════════
+   PAGE: VIDEOS
+══════════════════════════════════ */
+function pgVideos(){
+  const vids=[
+    {type:'explainer',title:'Why SR Feeds — English',desc:'Company overview, product strengths and export readiness for international buyers and distributors.',tags:['English','Explainer'],emoji:'🌐'},
+    {type:'explainer',title:'Our Story — Kannada',desc:'Local-language story connecting with farmers — trust, field experience and farmer support programs.',tags:['Kannada','Story'],emoji:'🗣️'},
+    {type:'testimonial',title:'Ramesh — Broiler Farm, Belagavi',desc:'"FCR improved and flock uniformity increased significantly after switching to SR Feeds programs."',tags:['Testimonial','Broiler'],emoji:'👤'},
+    {type:'testimonial',title:'Amina — Dairy Cooperative, Kenya',desc:'"The lactation feed increased our herd milk yield within 3 weeks. Consistent quality, batch to batch."',tags:['Testimonial','Cattle'],emoji:'👤'},
+    {type:'factory',title:'Factory Tour — How Feed is Made',desc:'Tour of our production process, QC labs and export-grade packaging facility.',tags:['Factory','QC'],emoji:'🏭'},
+    {type:'dealer',title:'Dealer Message — Regional Distributor',desc:'Distributor discusses market demand, shelf movement and the SR Feeds partnership experience.',tags:['Dealer','Distribution'],emoji:'📢'},
+  ];
+  return`
+<section class="hero" style="min-height:auto;padding:80px 0 60px">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div class="eyebrow rv"><span class="edot"></span>Media Gallery</div>
+    <h1 class="headline rv d1" style="font-size:clamp(34px,5vw,60px)">Videos &<br><em class="gold-text">Customer Stories</em></h1>
+    <p class="lead rv d2" style="max-width:540px">Factory tours, farmer testimonials, product explainers and dealer stories — in English and Kannada.</p>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <div class="filter-row">
+      <button class="fbtn act" data-vf="all" onclick="setVF(this,'all')">All</button>
+      <button class="fbtn" data-vf="explainer" onclick="setVF(this,'explainer')">Explainers</button>
+      <button class="fbtn" data-vf="testimonial" onclick="setVF(this,'testimonial')">Testimonials</button>
+      <button class="fbtn" data-vf="factory" onclick="setVF(this,'factory')">Factory</button>
+      <button class="fbtn" data-vf="dealer" onclick="setVF(this,'dealer')">Dealers</button>
+    </div>
+    <div class="vid-grid" id="vgrid">
+      ${vids.map(v=>`
+      <div class="vid-card rv" data-vtype="${v.type}" onclick="openModal('','${v.title}')">
+        <div class="vid-thumb">
+          <div class="vid-overlay">
+            <div style="font-size:52px">${v.emoji}</div>
+            <div style="font-size:10px;color:rgba(240,236,226,.5);font-weight:700;letter-spacing:1.5px;text-transform:uppercase">${v.type}</div>
+          </div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <div class="vid-play">▶</div>
+          </div>
+        </div>
+        <div class="vid-meta">
+          <h3>${v.title}</h3>
+          <p>${v.desc}</p>
+          <div class="vid-tags">${v.tags.map(t=>`<span class="vtag">${t}</span>`).join('')}</div>
+        </div>
+      </div>`).join('')}
+    </div>
+    <div style="margin-top:44px;text-align:center">
+      <div class="spec-card" style="max-width:560px;margin:0 auto;text-align:center;padding:40px">
+        <div style="font-size:32px;margin-bottom:14px">📹</div>
+        <div style="font-weight:800;font-size:18px;margin-bottom:10px;letter-spacing:-.3px">Upload your video assets</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.7">Replace the placeholder cards above with your actual MP4 files or YouTube video IDs. Contact us to add your videos.</div>
+        <a class="btn-gold" onclick="go('contact')" style="display:inline-flex">Send Your Videos →</a>
+      </div>
+    </div>
+  </div>
+</section>
+`;}
+function initVideos(){
+  window.setVF=function(btn,f){
+    document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('act'));
+    btn.classList.add('act');
+    document.querySelectorAll('#vgrid .vid-card').forEach(el=>{
+      el.style.display=(f==='all'||el.getAttribute('data-vtype')===f)?'':'none';});
+  };
+}
+
+/* ══════════════════════════════════
+   PAGE: ABOUT
+══════════════════════════════════ */
+function pgAbout(){return`
+<section class="hero" style="min-height:auto;padding:80px 0 60px">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div class="prod-hero-grid">
+      <div>
+        <div class="eyebrow rv"><span class="edot"></span>Our Story</div>
+        <h1 class="headline rv d1" style="font-size:clamp(34px,5vw,60px)">14 years of<br><em class="gold-text">farmer-first</em><br>feed science</h1>
+        <p class="lead rv d2">Born from a clear purpose — to deliver science-backed, affordable nutrition for small farms and commercial producers — SR Feeds has grown into a globally trusted brand.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px" class="rv d3">
+          <span class="pill">Lab-Tested Every Batch</span><span class="pill">Export Compliant</span><span class="pill">Farmer-First</span>
+        </div>
+      </div>
+      <div class="metrics-row rv d2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start">
+        ${[['14+','Years of R&D'],['1,500','Tons / Month'],['30+','Export Countries'],['4','Animal Programs']].map(([n,l])=>`<div class="metric-card"><div class="m-num">${n}</div><div class="m-lbl">${l}</div></div>`).join('')}
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <div class="about-grid">
+      <div>
+        <div class="slbl rv">Our Journey</div>
+        <h2 class="sh rv d1">Built from the ground up</h2>
+        <div class="tl" style="margin-top:28px">
+          ${[['2011','The Idea','A group of nutritionists and farmers began field trials to solve inconsistent feed performance on small farms.'],
+            ['2013','First Formulations','Launched validated broiler and layer programs after extensive on-farm testing and refinement.'],
+            ['2016','Scale-Up','Built the first production line with an in-house QA lab for batch-level testing and quality control.'],
+            ['2019','Export Ready','Upgraded packaging and compliance to international standards. Opened the first export markets.'],
+            ['2022','Cattle & Goat','Expanded into cattle and goat formulations with dedicated R&D and field trial programs.'],
+            ['Now','Global Growth','Ongoing R&D, farmer training, sustainable sourcing and international distributor partnerships.']]
+            .map(([yr,t,d],i,arr)=>`<div class="tl-item rv d${i%3}"><div class="tl-spine"><div class="tl-dot"></div>${i<arr.length-1?'<div class="tl-line"></div>':''}</div><div style="padding-bottom:4px"><div class="tl-yr">${yr} — ${t}</div><div class="tl-desc">${d}</div></div></div>`).join('')}
+        </div>
+      </div>
+      <div>
+        <div class="slbl rv">Mission & Values</div>
+        <div class="rv d1" style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:18px;padding:28px;margin-bottom:14px">
+          <div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:10px;text-transform:uppercase">Mission</div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.78">Deliver measurable animal nutrition solutions that raise productivity and support farmer livelihoods across all markets.</p>
+        </div>
+        <div class="rv d2" style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:18px;padding:28px;margin-bottom:14px">
+          <div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:10px;text-transform:uppercase">Vision</div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.78">To be the globally trusted feed brand recognised for research, quality and farmer-first innovation.</p>
+        </div>
+        <div class="rv d3" style="background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:18px;padding:28px">
+          <div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:16px;text-transform:uppercase">Core Values</div>
+          ${['Science-led formulations in every product','Full transparency in sourcing and testing','Farmer education and ongoing support','Sustainable raw material sourcing','Batch-level traceability from field to bag'].map(v=>`<div style="display:flex;align-items:center;gap:11px;margin-bottom:11px"><div style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0"></div><div style="font-size:13px;color:var(--muted)">${v}</div></div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <div class="slbl rv">Leadership</div>
+    <h2 class="sh rv d1">Meet the SR Feeds Team</h2>
+    <p class="ss rv d2" style="max-width:480px">A compact, expert team of nutritionists, production engineers and farmer support specialists.</p>
+    <div class="team-grid" style="margin-top:32px">
+      ${[['RM','Rasool Mirjanaik','Founder','A visionary entrepreneur with 14+ years of experience transforming SR Feeds from a field-trial concept into a globally expanding animal nutrition brand built on science, trust, and farmer profitability.'],
+        ['SP','Sohel Pakali','Chief Executive Officer','Building a next-generation livestock nutrition brand through ethical business practices, advanced infrastructure planning, and international market leadership across 30+ countries.'],
+        ['SS','Sayeem Shaikh','Chief Operations Manager','Driving operational excellence through efficient manufacturing, supply chain management, quality control systems, and scalable infrastructure focused on delivering consistent product performance and long-term business growth.']]
+        .map(([av,nm,rl,bio],i)=>`
+      <div class="team-card rv d${i}">
+        <div class="team-av">${av}</div>
+        <div class="team-name">${nm}</div>
+        <div class="team-role">${rl}</div>
+        <div class="team-bio">${bio}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp" style="background:linear-gradient(180deg,rgba(11,94,56,.05),transparent)">
+  <div class="w">
+    <div style="text-align:center;max-width:540px;margin:0 auto 52px">
+      <div class="slbl rv">Quality Promise</div>
+      <h2 class="sh rv d1">Standards you can verify</h2>
+    </div>
+    <div class="qual-grid">
+      ${[['🔬','In-House QA Lab','Every batch undergoes proximate analysis, pathogen checks and micronutrient validation. COA available per batch.'],
+        ['📦','Export-Grade Packaging','25 kg, 40 kg and 50 kg formats with international labelling. Custom palletization for distributors.'],
+        ['🌾','Raw Material Traceability','Full traceability from sourcing to batch records. Sustainable sourcing commitments in place.'],
+        ['📋','Compliance Documents','Health certificates, phytosanitary paperwork and export compliance documentation on request.'],
+        ['🧪','Continuous R&D','Nutritionists continuously refine formulations based on 14+ years of on-farm performance data.'],
+        ['🤝','Farmer Training','Dedicated technical support and feeding program guidance for partners and commercial farms.']]
+        .map(([ic,t,d],i)=>`<div class="qual-card rv d${i%3}"><div class="q-icon">${ic}</div><div class="q-title">${t}</div><div class="q-desc">${d}</div></div>`).join('')}
+    </div>
+  </div>
+</section>
+`;}
+
+/* ══════════════════════════════════
+   PAGE: CONTACT
+══════════════════════════════════ */
+function pgContact(){return`
+<section class="hero" style="min-height:auto;padding:80px 0 60px">
+  <div class="hero-ambient"></div>
+  <div class="w">
+    <div class="eyebrow rv"><span class="edot"></span>Let's Connect</div>
+    <h1 class="headline rv d1" style="font-size:clamp(34px,5vw,60px)">Partner With<br><em class="gold-text">SR Feeds</em></h1>
+    <p class="lead rv d2" style="max-width:540px">For samples, technical support, export documents or distributor partnerships — our team responds within 48 hours.</p>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp">
+  <div class="w">
+    <div class="contact-grid">
+      <div class="spec-card rv">
+        <h2 style="font-size:22px;font-weight:800;margin-bottom:28px;letter-spacing:-.4px">Send an Enquiry</h2>
+        <div class="frow">
+          <div class="fg"><label>Full Name *</label><input id="cf-name" type="text" placeholder="Your full name"/></div>
+          <div class="fg"><label>Company / Farm</label><input id="cf-co" type="text" placeholder="Farm or company name"/></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Email *</label><input id="cf-email" type="email" placeholder="you@company.com"/></div>
+          <div class="fg"><label>Phone / WhatsApp</label><input id="cf-phone" type="tel" placeholder="+91 98xxxxxxxx"/></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Country</label>
+            <select id="cf-country"><option>India</option><option>United Arab Emirates</option><option>Kenya</option><option>Bangladesh</option><option>Nigeria</option><option>Saudi Arabia</option><option>Malaysia</option><option>Other</option></select>
+          </div>
+          <div class="fg"><label>Enquiry Type</label>
+            <select id="cf-type"><option>General enquiry</option><option>Request sample</option><option>Distributor / partnership</option><option>Export / compliance</option><option>Technical support</option><option>Pricing / quotation</option></select>
+          </div>
+        </div>
+        <div class="fg"><label>Message</label><textarea id="cf-msg" placeholder="Tell us briefly what you need — animal type, farm size, destination country…"></textarea></div>
+        <div style="margin-top:10px;display:flex;gap:9px;align-items:flex-start">
+          <input id="cf-consent" type="checkbox" style="width:16px;height:16px;margin-top:3px;flex-shrink:0;accent-color:var(--gold)">
+          <label style="font-size:12px;color:var(--muted)">I agree to be contacted by SR Feeds regarding this enquiry.</label>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn-gold" onclick="submitContact()">Send Enquiry →</button>
+          <a class="btn-outline" href="https://wa.me/917795976538?text=Hello%20SR%20Feeds" target="_blank">WhatsApp Instead</a>
+        </div>
+        <div id="cf-status" style="margin-top:16px"></div>
+      </div>
+      <div class="rv d1">
+        <div class="contact-info-card" style="margin-bottom:20px">
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:18px">Contact Details</h3>
+          ${[['📍','Factory & Office','SR Feeds, Shindikurbet, Gokak Dist. Belagavi, Karnataka, India — 591306'],
+            ['📞','Phone / WhatsApp','+91 7795976538'],
+            ['✉️','Email','srfeedskbt@gmail.com'],
+            ['🕐','Business Hours','Mon–Sat: 9:00 – 18:00 IST · Sunday: Closed'],
+            ['📦','Export Enquiries','Documents available on request — mention destination country.']]
+            .map(([ic,t,v])=>`<div class="ci-item"><div class="ci-icon">${ic}</div><div><div class="ci-title">${t}</div><div class="ci-val">${v}</div></div></div>`).join('')}
+        </div>
+        <div style="border-radius:14px;overflow:hidden;border:1px solid var(--bdr);height:180px;margin-bottom:20px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d456.41793395991044!2d74.7949649737147!3d16.224668115931657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1765433924675!5m2!1sen!2sin" width="100%" height="180" style="border:0;filter:hue-rotate(120deg) brightness(.6) contrast(1.1)" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact-info-card">
+          <div style="font-weight:800;margin-bottom:16px;font-size:15px">Quick FAQ</div>
+          ${[['How long for international sample shipments?','Typical dispatch is 3–7 business days depending on destination and paperwork requirements.'],
+            ['Do you provide COA and health certificates?','Yes — request all required export compliance documents in your enquiry.'],
+            ['Can you handle custom branding for distributors?','Yes — private label and custom packaging available for qualified distributors.']]
+            .map(([q,a])=>`<div style="margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.05)"><div style="font-size:13px;font-weight:700;margin-bottom:5px;color:var(--cream)">Q: ${q}</div><div style="font-size:13px;color:var(--muted);line-height:1.6">A: ${a}</div></div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;}
+
+function initContact(){
+  window.submitContact=function(){
+    const name=document.getElementById('cf-name').value.trim();
+    const email=document.getElementById('cf-email').value.trim();
+    const consent=document.getElementById('cf-consent').checked;
+    const st=document.getElementById('cf-status');
+    if(!name||!email){st.innerHTML='<div style="background:rgba(220,50,50,.12);border:1px solid rgba(220,50,50,.28);border-radius:10px;padding:13px;font-size:13px;color:#ff8080">Please enter your name and email address.</div>';return;}
+    if(!consent){st.innerHTML='<div style="background:rgba(220,50,50,.12);border:1px solid rgba(220,50,50,.28);border-radius:10px;padding:13px;font-size:13px;color:#ff8080">Please confirm you agree to be contacted.</div>';return;}
+    const sub=encodeURIComponent('SR Feeds Website Enquiry — '+document.getElementById('cf-type').value);
+    const body=encodeURIComponent(`Name: ${name}\nCompany: ${document.getElementById('cf-co').value}\nEmail: ${email}\nPhone: ${document.getElementById('cf-phone').value}\nCountry: ${document.getElementById('cf-country').value}\nType: ${document.getElementById('cf-type').value}\nMessage: ${document.getElementById('cf-msg').value}`);
+    window.location.href=`mailto:srfeedskbt@gmail.com?subject=${sub}&body=${body}`;
+    st.innerHTML='<div style="background:rgba(11,94,56,.15);border:1px solid rgba(11,94,56,.3);border-radius:10px;padding:13px;font-size:13px;color:#7ec89a">✓ Your email client will open with the message ready. For instant reply, WhatsApp us directly.</div>';
+  };
+}
+
+/* ─── BOOT ─── */
+render(location.hash.replace('#','')||'home');
+</script>
+</body>
+</html>
